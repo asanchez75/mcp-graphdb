@@ -62,6 +62,26 @@ The command-line arguments take precedence over environment variables.
 
 To use this server with the Claude Desktop app, add the following configuration to the "mcpServers" section of your `claude_desktop_config.json`:
 
+### If installed via npm globally:
+
+```json
+{
+  "mcpServers": {
+    "graphdb": {
+      "command": "mcp-server-graphdb",
+      "env": {
+        "GRAPHDB_ENDPOINT": "http://localhost:7200",
+        "GRAPHDB_REPOSITORY": "myRepository",
+        "GRAPHDB_USERNAME": "username",
+        "GRAPHDB_PASSWORD": "password"
+      }
+    }
+  }
+}
+```
+
+### If installed from source:
+
 ```json
 {
   "mcpServers": {
@@ -85,16 +105,30 @@ Replace the values with your specific GraphDB configuration.
 
 ## Installation
 
+### Using npm (Recommended)
+
+```sh
+npm install -g mcp-server-graphdb
+```
+
+Or install locally in your project:
+
+```sh
+npm install mcp-server-graphdb
+```
+
+### From Source
+
 ```sh
 # Clone the repository
 git clone https://github.com/keonchennl/mcp-server-graphdb.git
 cd mcp-server-graphdb
 
 # Install dependencies
-yarn install
+npm install
 
 # Build the project
-yarn build
+npm run build
 ```
 
 ## Example SPARQL Queries
