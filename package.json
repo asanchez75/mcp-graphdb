@@ -1,6 +1,6 @@
 {
   "name": "mcp-server-graphdb",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for interacting with Ontotext GraphDB via SPARQL",
   "license": "MIT",
   "type": "module",
@@ -42,7 +42,6 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.0.1",
     "dotenv": "^16.3.1",
-    "mcp-server-graphdb": "^0.1.0",
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
